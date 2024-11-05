@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const routers = require('./routers/posts.js');
+const postRouter = require('./routers/posts.js');
 const PORT = 3000
 
 
@@ -12,4 +12,4 @@ app.get('/', (req, res) => {
     res.redirect('/posts');
 });
 
-app.use('/posts', routers)
+app.use('/posts', postRouter)
